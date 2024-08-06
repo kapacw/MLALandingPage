@@ -1,0 +1,292 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1D2023;
+    font-family: "Roboto";
+    color: #FFFFFF;
+    overflow: hidden;
+}
+.space{
+    width: 100%;
+    height: 3px;
+}
+.flex{
+    display: flex;
+}
+.boxShadow{
+    box-shadow: 3px 3px 5px black;
+}
+.justifySpaceBetween{
+    justify-content: space-between;
+}
+.alignItems{
+    align-items: center;
+}
+.flexColumn{
+    flex-direction: column;
+}
+.transitionProperty{
+    transition-property: all;
+    transition-duration: 700ms;
+}
+.tituloPrincipal{
+    font-size: 1.875rem;
+    opacity: 25%;
+    margin: 0;
+}
+.header{
+    justify-content: center;
+    background-color: #262B32;
+    width: 100%;
+    height: 76px;
+}
+.title{
+    width: 96%;
+    height: 100%;
+}
+.part1Header{
+    gap: 2px 20px;
+    width: 675px;
+    height: 70px;
+}
+.divisoriaLogo{
+    width: 2px;
+    height: 54px;
+    background-color: #3E4750;
+    border: 0;
+}
+.buttons{
+    width: 224px;
+    height: 48px;
+}
+.icons{
+    width: 64px;
+    height: 48px;
+    border-radius: 5px;   
+    background-color: #30373E;
+    border: 0;
+    margin-right: 5px;
+}
+.buttonMenu{
+    display: none;
+    justify-content: center;
+}
+.buttonContent{
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    opacity: 60%;
+}
+.dropContent{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    height: 220px;
+    background-color: #363e46;
+    border-radius: 8px;
+    z-index: 1;
+}
+.botaoBemVindo{
+    color: rgb(0, 222, 252);
+    padding-left: 20px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    height: 100%;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.botaoIcons{
+    height: 18px;
+}
+.botaoTexto{
+    margin: 0;
+    padding-left: 25px;
+}
+.main{
+    width: 95%;
+    height: 150vh;
+    margin: auto;
+}
+.home{
+    align-content: center;
+    width: 100%;
+    height: 68px;
+    opacity: 50%;
+}
+.principal{
+    width: 100%;
+    height: 70vh;
+}
+.info{
+    width: 192px;
+    height: 604px;
+}
+.divisoriaMain{
+    width: 2px;
+    height: 72vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #3E4750;
+    border: 0;
+}
+.mapa{
+    width: 92vh;
+    align-content: center;
+}
+.section{
+    width: 100%;
+    height: 220px;
+}
+.titulos{
+    font-size: 20px;
+    opacity: 60%;
+}
+.municipios{
+    gap: 18px 2px;
+    width: 160px;
+    height: 380px;
+}
+.divListaMunicipios{
+    width: 100%;
+    height: 320px;
+    background-color: #262B32;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+.listaMunicipios{
+    justify-content: space-evenly;
+    width: 128px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.quadradoCinza{
+    padding-left: 20px;
+    justify-content: center;
+    background-color: #30373E;
+    width: 180px;
+    height: 80px;
+    margin-top: 15px;
+    border-radius: 7px;
+}
+.popUp{
+    opacity: 0%;
+    position: absolute;
+    font-size: .675rem;
+    border: 2px solid rgb(253, 177, 12);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #1D2023;
+}
+#popUpInfo1{
+    left: 255px;
+    top: 210px;
+}
+#popUpInfo2{
+    left: 255px;
+    top: 305px;
+}
+#popUpInfo3{
+    left: 255px;
+    top: 470px;
+}
+#popUpInfo4{
+    left: 255px;
+    top: 560px;
+}
+#popUpMenu{
+    left: 55px;
+    top: 75px;
+}
+#popUpLupa{
+    right: 140px;
+    top: 75px;
+}
+#popUpSino{
+    right: 125px;
+    top: 75px;
+}
+#popUpHome{
+    left: 82px;
+    top: 98px;
+}
+.nomeInfo{
+    font-size: .875rem;
+    opacity: 30%;
+}
+.numero{
+    font-size: 26px;
+    opacity: 90%;
+}
+.medida{
+    font-size: .875rem;
+    opacity: 60%;
+}
+.buttonCity{
+    width: 128px;
+    height: 36px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #30373E;
+    color: white;
+}
+.city{
+    font-size: 1.125rem;
+}
+@media screen and (max-width: 640px) {
+    .displayNone{
+        display: none;
+    }
+    .width100{
+        width: 100%;
+    }
+    .width95{
+        width: 95%;
+        margin: auto;
+    }
+    .part1Header{
+        width: 242px;
+        gap: 0px 0px;
+    }
+    .home{
+        height: 48px;
+    }
+    .principal{
+        flex-direction: column;
+    }
+    .info{
+        flex-direction: row;
+        align-items: center;
+    }
+    .quadradoCinza{
+        width: 86%;
+        margin: auto;
+    }
+    .divisoriaMain{
+        height: 2px;
+        margin: auto;
+    }
+    .numero{
+        font-size: 1rem
+    }
+    .casinha{
+        height: 20px;
+        width: 20px;
+    }
+    .buttons{
+        justify-content: flex-end;
+    }
+    .buttonMenu{
+        display: flex;
+    }
+}

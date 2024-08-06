@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MLA Dashboard</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="root">
+            <div class="space"></div>
+            <div class="header flex boxShadow">    
+                <div class="title flex justifySpaceBetween alignItems">
+                    <div class="part1Header flex justifySpaceBetween alignItems">
+                        <img onclick="alert('Menu')" onmouseover="ponteiro(this); popUpMenu()" onmouseout="popOutMenu()" src="./assets/MLA Logo.png">
+                        <hr class="divisoriaLogo">
+                        <p class="displayNone tituloPrincipal"> Mais Luz para a Amazônia</p>
+                        <hr class="divisoriaLogo displayNone">
+                        <p class="tituloPrincipal"> Dashboard</p>
+                    </div>
+                    <div class="buttons flex justifySpaceBetween">
+                        <button class="icons boxShadow displayNone transitionProperty" onclick="alert('Pesquisa')" onmouseover="ponteiro_corFundo(this); popUpLupa()" onmouseout="ponteiroOff(this); popOutLupa()"> <img src="./assets/Lupa.png"></button>
+                        <button class="icons boxShadow displayNone transitionProperty" onclick="alert('Alarmes')" onmouseover="ponteiro_corFundo(this); popUpSino()" onmouseout="ponteiroOff(this); popOutSino()"><img src="./assets/Sino.png"></button>
+                        <button class="icons boxShadow displayNone transitionProperty" onclick="alert('Usuário')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)"><img src="./assets/Perfil.png"></button>
+                        <div>
+                            <button class="icons boxShadow buttonMenu flex flexColumn alignItems" onclick="botaoDrop()" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)"><hr class="buttonContent"><hr class="buttonContent"><hr class="buttonContent"></button>
+                            <div id="dropDown" class="dropContent flex flexColumn boxShadow transitionProperty">
+                                <p class="botaoBemVindo">Bem-vindo(a), mlaadmin@gmail.com</p> 
+                                <ul class="flex flexColumn ">
+                                    <div class="botaoDivTexto" onclick="alert('Unidades Consumidoras')" onmouseover="ponteiro(this)">
+                                        <li class="flex">
+                                            <img class="botaoIcons" src="./assets/Lupa.png">
+                                            <p class="botaoTexto"><strong>Unidades Consumidoras</strong></p>
+                                        </li>
+                                    </div>
+                                    <div class="botaoDivTexto" onclick="alert('Alarmes')" onmouseover="ponteiro(this)">
+                                        <li class="flex">
+                                            <img class="botaoIcons" src="./assets/Sino.png">
+                                            <p class="botaoTexto"><strong>Alarmes</strong></p>
+                                        </li>
+                                    </div>
+                                    <div class="botaoDivTexto" onclick="alert('Desconectar')" onmouseover="ponteiro(this)">
+                                        <li class="flex">
+                                            <img class="botaoIcons" src="./assets/desconectar.png">
+                                            <p class="botaoTexto"><strong>Desconectar</strong></p>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="main flex flexColumn">
+                <div id="popUpInfo1" class="popUp flex alignItems displayNone transitionProperty">Geração de Energia no Dia anterior</div>
+                <div id="popUpInfo2" class="popUp flex alignItems displayNone transitionProperty">Geração de Energia nos últimos 30 dias</div>
+                <div id="popUpInfo3" class="popUp flex alignItems displayNone transitionProperty">Consumo de Energia no Dia anterior</div>
+                <div id="popUpInfo4" class="popUp flex alignItems displayNone transitionProperty">Consumo de Energia nos últimos 30 dias</div>
+                <div id="popUpMenu" class="popUp flex alignItems displayNone transitionProperty">Menu</div>
+                <div id="popUpLupa" class="popUp flex alignItems displayNone transitionProperty">Buscar Unidades Consumidores</div>
+                <div id="popUpSino" class="popUp flex alignItems displayNone transitionProperty">Alarmes</div>
+                <div id="popUpHome" class="popUp flex alignItems displayNone transitionProperty">Início</div>
+                <div class="home">
+                    <img onclick="alert('Início')" onmouseover="ponteiro(this);popUpHome()" onmouseout="popOutHome()" class="casinha" src="./assets/Casa.png">
+                </div>
+                <div class="principal flex justifySpaceBetween">
+                    
+                    <div class="info flex flexColumn justifySpaceBetween width100">
+                        <div class="section flex flexColumn">
+                            <span class="titulos"><strong>Geração</strong></span>
+                                <div class="quadradoCinza flex flexColumn" onmouseover="popUpInfo1()" onmouseout="popOutInfo1()">
+                                    <span class="nomeInfo">Dia anterior</span>
+                                    <div class="dados">
+                                        <span class="numero"><strong>806</strong></span>
+                                        <span class="medida">Wh</span>
+                                    </div>
+                                </div>
+                            <div class="quadradoCinza flex flexColumn" onmouseover="popUpInfo2()" onmouseout="popOutInfo2()">
+                                <span class="nomeInfo">Últimos 30d</span>
+                                <div class="dados">
+                                    <span class="numero"><strong>806</strong></span>
+                                    <span class="medida">Wh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section flex flexColumn">
+                            <span class="titulos"><strong>Consumo</strong></span>
+                            <div class="quadradoCinza flex flexColumn" onmouseover="popUpInfo3()" onmouseout="popOutInfo3()">
+                                <span class="nomeInfo">Dia anterior</span>
+                                <div class="dados">
+                                    <span class="numero"><strong>2,419</strong></span>
+                                    <span class="medida">KWh</span>
+                                </div>
+                            </div>
+                            <div class="quadradoCinza flex flexColumn" onmouseover="popUpInfo4()" onmouseout="popOutInfo4()">
+                                <span class="nomeInfo">Últimos 30d</span>
+                                <div class="dados">
+                                    <span class="numero"><strong>2,419</strong></span>
+                                    <span class="medida">KWh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex alignItems flexColumn displayNone">
+                            <img style="width: 80%;" src="./assets/Amazonas_Energia.svg">
+                            <img style= "width: 80%;" src="./assets/Enerwatt_Engenharia.svg">
+                        </div>
+                    </div>
+                    <hr class="divisoriaMain displayNone">
+                    <div class="mapa displayNone"><img style="height: auto; width: 100%;" src="./assets/Mapa.png"></div>
+                    <hr class="divisoriaMain width100">
+                    <div class="municipios flex flexColumn width100">
+                        <div class="divTituloMun">
+                            <span class="titulos"><strong>Municípios</strong></span>
+                        </div>
+                        <div class="divListaMunicipios flex flexColumn alignItems">
+                            <div class=" listaMunicipios flex flexColumn width100">
+                                <button class="buttonCity boxShadow width95  transitionProperty" onclick="alert('Beruri')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city">Beruri</span>
+                                </button>
+                                <button class="buttonCity boxShadow width95 transitionProperty" onclick="alert('Boca Do Acre')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city">Boca Do Acre</span>
+                                </button>
+                                <button class="buttonCity boxShadow width95 transitionProperty" onclick="alert('Canutama')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city ">Canutama</span>
+                                </button>
+                                <button class="buttonCity boxShadow width95 transitionProperty" onclick="alert('Lábrea')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city">Lábrea</span>
+                                </button>
+                                <button class="buttonCity boxShadow width95 transitionProperty" onclick="alert('Manaus')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city">Manaus</span>
+                                </button>
+                                <button class="buttonCity boxShadow width95 transitionProperty" onclick="alert('Pauini')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city">Pauini</span>
+                                </button>
+                                <button class="buttonCity boxShadow width95 transitionProperty" onclick="alert('Tapauá')" onmouseover="ponteiro_corFundo(this)" onmouseout="ponteiroOff(this)">
+                                    <span class="city">Tapauá</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
